@@ -15,7 +15,26 @@ public class Main {
 //        doInsertSort();
 //        findNumber(8);
 
-        doProduct();
+//        doProduct();
+
+//        char[] str = "".toCharArray();
+//        char[] pattern = ".*".toCharArray();
+//        new Solution().match(str, pattern);
+
+        TreeNode node = new TreeNode(10);
+        TreeNode node2 = new TreeNode(6);
+        TreeNode node3 = new TreeNode(14);
+        TreeNode node4 = new TreeNode(4);
+        TreeNode node5 = new TreeNode(8);
+        TreeNode node6 = new TreeNode(12);
+        TreeNode node7 = new TreeNode(16);
+        node.left = node2;
+        node.right = node3;
+        node2.left = node4;
+        node2.right = node5;
+        node3.left = node6;
+        node3.right = node7;
+        new Solution().Convert(node);
     }
 
     public static void doInsertSort() {
