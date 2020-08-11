@@ -1,5 +1,7 @@
 package com.zj.leetcode.firstSearch;
 
+import java.util.Stack;
+
 public class SurroundedArea {
 
     /**
@@ -48,6 +50,12 @@ public class SurroundedArea {
         }
     }
 
+    /**
+     * dfs 递归调用
+     * @param x
+     * @param y
+     * @param board
+     */
     private void dfsRecursion(int x, int y, char[][] board) {
         if (x < 0 || x >= board.length || y < 0 || y >= board[0].length || board[x][y] == 'X' || board[x][y] == '#') {
             return;
@@ -57,5 +65,50 @@ public class SurroundedArea {
         dfsRecursion(x, y - 1, board);
         dfsRecursion(x + 1, y, board);
         dfsRecursion(x, y + 1, board);
+    }
+
+    class Pos {
+        int x;
+        int y;
+
+        public Pos(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
+    private void dfsIterator(char[][] board,int x, int y) {
+        Stack<Pos> stack = new Stack<>();
+        stack.push(new Pos(x, y));
+        board[x][y] = '#';
+        while (!stack.isEmpty()) {
+            Pos current = stack.peek();
+            // 上
+            if (current.y - 1 >= 0 && board[current.x][current.y - 1] == 'O') {
+                board[current.x][current.y - 1] = '#';
+                stack.push(new Pos(current.x, current.y - 1));
+                continue;
+            }
+            // 下
+            if (current.y + 1 < board[0].length && board[current.x][current.y + 1] == 'O') {
+                board[current.x][current.y + 1] = '#';
+                stack.push(new Pos(current.x, current.y + 1));
+                continue;
+            }
+            // 左
+            if (current.x - 1 >= 0 && board[current.x - 1][current.y] == 'O') {
+                board[current.x - 1][current.y] = '#';
+                stack.push(new Pos(current.x - 1, current.y));
+                continue;
+            }
+            // 右
+            if (current.x + 1 < board.length && board[current.x + 1][current.y] == 'O') {
+                board[current.x + 1][current.y] = '#';
+                stack.push(new Pos(current.x + 1, current.y));
+                continue;
+            }
+
+            stack.pop();
+        }
     }
 }
