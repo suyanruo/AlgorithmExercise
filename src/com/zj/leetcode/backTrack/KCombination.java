@@ -38,6 +38,7 @@ public class KCombination {
       return;
     }
 
+    // TODO: 2020/9/8 可优化：搜索起点的上界 + 接下来要选择的元素个数 - 1 = n  ->  搜索起点的上界 = n - (k - path.size()) + 1
     for (int i = currentNum; i <= n; i++) {
       current.add(new Integer(i));
       combineKinN(n, k, current, i + 1);
