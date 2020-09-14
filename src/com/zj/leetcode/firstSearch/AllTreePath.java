@@ -1,5 +1,7 @@
 package com.zj.leetcode.firstSearch;
 
+import com.zj.leetcode.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,10 +55,5 @@ public class AllTreePath {
     return currentPath.isEmpty() ? currentPath + value : currentPath + "->" + value;
   }
 
-  public class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
-  }
+
 }
