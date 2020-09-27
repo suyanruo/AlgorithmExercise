@@ -25,7 +25,6 @@ import com.zj.leetcode.TreeNode;
  */
 public class BuildTreeFromInOrderAndPostOrder {
   public TreeNode buildTree(int[] inorder, int[] postorder) {
-//    return build(inorder, postorder);
     return build(inorder, postorder, 0, inorder.length - 1, 0, postorder.length - 1);
   }
 
