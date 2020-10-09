@@ -16,14 +16,4 @@ public class RemoveNthNode {
         slow.next = slow.next.next;
         return start.next;
     }
-
-
-    /**
-     *  Definition for singly-linked list.
-     */
-     public class ListNode {
-         int val;
-         ListNode next;
-         ListNode(int x) { val = x; }
-     }
 }

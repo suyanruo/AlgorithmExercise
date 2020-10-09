@@ -1,5 +1,7 @@
 package com.zj.leetcode.linkedList;
 
+import com.zj.ListNode;
+
 /**
  * Created on 2020/8/31.
  * 给你一个链表，每 k 个节点一组进行翻转，请你返回翻转后的链表。
@@ -61,12 +63,5 @@ public class GroupReverse {
       cur = next;
     }
     return pre;
-  }
-
-
-  public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
   }
 }
