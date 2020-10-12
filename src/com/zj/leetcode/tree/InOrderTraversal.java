@@ -4,6 +4,7 @@ import com.zj.leetcode.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * Created on 2020/9/14.
@@ -38,5 +39,22 @@ public class InOrderTraversal {
     traversal(root.left, res);
     res.add(root.val);
     traversal(root.right, res);
+  }
+
+  /**
+   * 迭代法中序遍历
+   */
+  private void traversalIt(TreeNode root, List<Integer> res) {
+    Stack<TreeNode> stack = new Stack<>();
+    TreeNode node = root;
+    while (node != null || !stack.isEmpty()) {
+      while (node != null) {
+        stack.push(node);
+        node = node.left;
+      }
+      node = stack.pop();
+      res.add(node.val);
+      node = node.right;
+    }
   }
 }
