@@ -1,5 +1,7 @@
 package com.zj;
 
+import com.zj.model.ListNode;
+
 public class MergeTwoLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) return l2;

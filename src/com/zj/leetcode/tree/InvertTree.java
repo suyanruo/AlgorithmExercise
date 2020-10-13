@@ -1,6 +1,6 @@
 package com.zj.leetcode.tree;
 
-import com.zj.leetcode.TreeNode;
+import com.zj.model.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

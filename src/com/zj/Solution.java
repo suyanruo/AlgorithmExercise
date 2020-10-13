@@ -1,5 +1,8 @@
 package com.zj;
 
+import com.zj.model.ListNode;
+import com.zj.model.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

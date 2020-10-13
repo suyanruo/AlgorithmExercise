@@ -1,6 +1,6 @@
 package com.zj.leetcode.linkedList;
 
-import com.zj.ListNode;
+import com.zj.model.ListNode;
 
 /**
  * Created on 2020/10/9.

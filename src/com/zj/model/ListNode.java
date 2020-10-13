@@ -1,4 +1,4 @@
-package com.zj;
+package com.zj.model;
 
 public class ListNode {
     public int val;

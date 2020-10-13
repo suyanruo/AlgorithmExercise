@@ -1,6 +1,6 @@
 package com.zj.leetcode.dynamic;
 
-import com.zj.leetcode.TreeNode;
+import com.zj.model.TreeNode;
 
 /**
  * Created on 2020/9/22.

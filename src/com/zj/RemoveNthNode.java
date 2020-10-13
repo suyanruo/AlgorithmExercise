@@ -1,5 +1,7 @@
 package com.zj;
 
+import com.zj.model.ListNode;
+
 public class RemoveNthNode {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode start = new ListNode(0);

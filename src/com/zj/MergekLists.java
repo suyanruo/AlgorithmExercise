@@ -1,5 +1,7 @@
 package com.zj;
 
+import com.zj.model.ListNode;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
