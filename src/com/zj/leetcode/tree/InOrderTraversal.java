@@ -26,35 +26,44 @@ import java.util.Stack;
  */
 public class InOrderTraversal {
 
-  public List<Integer> inorderTraversal(TreeNode root) {
-    List<Integer> result = new ArrayList<>();
-    traversal(root, result);
-    return result;
+  /**
+   * 递归调用
+   */
+  static class RecursionSolution {
+    public List<Integer> inorderTraversal(TreeNode root) {
+      List<Integer> result = new ArrayList<>();
+      traversal(root, result);
+      return result;
+    }
+
+    private void traversal(TreeNode root, List<Integer> res) {
+      if (root == null) {
+        return;
+      }
+      traversal(root.left, res);
+      res.add(root.val);
+      traversal(root.right, res);
+    }
   }
 
-  private void traversal(TreeNode root, List<Integer> res) {
-    if (root == null) {
-      return;
-    }
-    traversal(root.left, res);
-    res.add(root.val);
-    traversal(root.right, res);
-  }
 
   /**
    * 迭代法中序遍历
    */
-  private void traversalIt(TreeNode root, List<Integer> res) {
-    Stack<TreeNode> stack = new Stack<>();
-    TreeNode node = root;
-    while (node != null || !stack.isEmpty()) {
-      while (node != null) {
-        stack.push(node);
-        node = node.left;
+  static class IteratorSolution {
+    private void inorderTraversal(TreeNode root) {
+      List<Integer> result = new ArrayList<>();
+      Stack<TreeNode> stack = new Stack<>();
+      TreeNode node = root;
+      while (node != null || !stack.isEmpty()) {
+        while (node != null) {
+          stack.push(node);
+          node = node.left;
+        }
+        node = stack.pop();
+        result.add(node.val);
+        node = node.right;
       }
-      node = stack.pop();
-      res.add(node.val);
-      node = node.right;
     }
   }
 }
