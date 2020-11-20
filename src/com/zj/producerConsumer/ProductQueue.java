@@ -3,6 +3,10 @@ package com.zj.producerConsumer;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 生产者消费者
+ * ref: https://blog.csdn.net/zengrenyuan/article/details/80671724
+ */
 public class ProductQueue<T> {
     private final T[] items;
 
