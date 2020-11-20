@@ -2,7 +2,7 @@ package com.zj;
 
 import com.zj.model.TreeNode;
 import com.zj.producerConsumer.ProductQueue;
-import com.zj.sort.InsertSort;
+import com.zj.sort.SortSolution;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -39,7 +39,7 @@ public class Main {
     }
 
     public static void doInsertSort() {
-        InsertSort.insertSort(a);
+        SortSolution.insertionSort(a);
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
         }

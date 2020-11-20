@@ -16,7 +16,7 @@ public class ValidParentheses {
                 ph.push(']');
             } else if (element == '(') {
                 ph.push(')');
-            } else if (ph.isEmpty() || ph.pop() != element) {
+            } else if (ph.isEmpty() || !ph.pop().equals(element)) {
                 return false;
             }
         }
@@ -32,7 +32,7 @@ public class ValidParentheses {
         for (Character c : s.toCharArray()) {
             if (map.containsKey(c)) {
                 stack.push(c);
-            } else if (stack.isEmpty() || c != map.get(stack.pop())) {
+            } else if (stack.isEmpty() || !c.equals(map.get(stack.pop()))) {
                 return false;
             }
         }
