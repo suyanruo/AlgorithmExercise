@@ -11,9 +11,7 @@ import java.util.Arrays;
  */
 public class SortSolution {
 
-  /**
-   * -----------------------冒泡排序-----------------------
-   */
+  /*-----------------------冒泡排序-----------------------*/
   public static int[] bubbleSort(int[] array) {
     if (array.length <= 1) {
       return array;
@@ -28,9 +26,7 @@ public class SortSolution {
     return array;
   }
 
-  /**
-   * -----------------------选择排序-----------------------
-   */
+  /*-----------------------选择排序-----------------------*/
   public static int[] selectionSort(int[] array) {
     if (array.length <= 1) {
       return array;
@@ -48,9 +44,7 @@ public class SortSolution {
     return array;
   }
 
-  /**
-   * -----------------------插入排序-----------------------
-   */
+  /*-----------------------插入排序-----------------------*/
   public static int[] insertionSort(int[] array) {
     if (array.length <= 1) {
       return array;
@@ -69,9 +63,7 @@ public class SortSolution {
     return array;
   }
 
-  /**
-   * -----------------------快速排序-----------------------
-   */
+  /*-----------------------快速排序-----------------------*/
   public static int[] quickSort(int[] array, int start, int end) {
     if (array == null || array.length <= 1 || start == end) {
       return array;
@@ -113,9 +105,7 @@ public class SortSolution {
     return startIndex;
   }
 
-  /**
-   * -----------------------希尔排序-----------------------
-   */
+  /*-----------------------希尔排序-----------------------*/
   public static int[] shellSort(int[] array) {
     if (array.length <= 1) {
       return array;
@@ -138,9 +128,7 @@ public class SortSolution {
     return array;
   }
 
-  /**
-   * -----------------------归并排序-----------------------
-   */
+  /*-----------------------归并排序-----------------------*/
   public static int[] mergeSort(int[] array) {
     if (array.length <= 1) {
       return array;
@@ -170,9 +158,7 @@ public class SortSolution {
     return result;
   }
 
-  /**
-   * -----------------------堆排序算法-----------------------
-   */
+  /*-----------------------堆排序算法-----------------------*/
   //声明全局变量，用于记录数组array的长度；
   static int len;
 
@@ -218,9 +204,7 @@ public class SortSolution {
     }
   }
 
-  /**
-   * -----------------------计数排序-----------------------
-   */
+  /*-----------------------计数排序-----------------------*/
   public static int[] CountingSort(int[] array) {
     if (array.length == 0) return array;
     int bias, min = array[0], max = array[0];
@@ -248,9 +232,7 @@ public class SortSolution {
     return array;
   }
 
-  /**
-   * -----------------------桶排序-----------------------
-   */
+  /*-----------------------桶排序-----------------------*/
   public static ArrayList<Integer> bucketSort(ArrayList<Integer> array, int bucketSize) {
     if (array == null || array.size() < 2)
       return array;
