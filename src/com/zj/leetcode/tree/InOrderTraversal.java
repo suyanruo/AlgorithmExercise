@@ -65,5 +65,21 @@ public class InOrderTraversal {
         node = node.right;
       }
     }
+
+    private void inorderTraversal2(TreeNode root) {
+      List<Integer> result = new ArrayList<>();
+      Stack<TreeNode> stack = new Stack<>();
+      TreeNode node = root;
+      while (node != null || !stack.isEmpty()) {
+        if (node != null) {
+          stack.push(node);
+          node = node.left;
+        } else {
+          node = stack.pop();
+          result.add(node.val);
+          node = node.right;
+        }
+      }
+    }
   }
 }
