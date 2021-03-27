@@ -40,7 +40,6 @@ public class ReverseBetween {
         preLeft.next.next = nextNode;
         preLeft.next = curNode;
       } else  {
-        curNode.next = preNode;
         preNode = curNode;
         curNode = nextNode;
         nextNode = nextNode.next;
