@@ -39,9 +39,6 @@ public class CombinationSum3 {
     }
 
     for (int i = curNum; i <= n && i < 10; i++) {
-      if (n - i <= i) {
-        break;
-      }
       cur.addLast(i);
       combine(k - 1, n - i, res, cur, i + 1);
       cur.removeLast();
