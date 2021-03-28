@@ -34,7 +34,7 @@ public class KCombination {
 
   private void combineKinN(int n, int k, List<Integer> current, int currentNum) {
     if (current.size() == k) {
-      result.add(current);
+      result.add(new ArrayList(current));
       return;
     }
 

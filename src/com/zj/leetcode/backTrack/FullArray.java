@@ -47,7 +47,8 @@ public class FullArray {
         continue;
       }
       // 剪枝条件：i > 0 是为了保证 nums[i - 1] 有意义
-      // 写 !used[i - 1] 是因为 nums[i - 1] 在深度优先遍历的过程中刚刚被撤销选择
+      // 写 !used[i - 1] 是因为 nums[i - 1] 在深度优先遍历的过程中刚刚被撤销选择，
+      // 为了防止写入num[i]后再写入num[i - 1]导致同样的list出现多次，所以对多个相同值的数组元素只能按下标顺序存入一次
       if (i > 0 && nums[i - 1] == nums[i] && !used[i - 1]) {
         continue;
       }
