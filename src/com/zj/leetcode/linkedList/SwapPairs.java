@@ -40,17 +40,17 @@ public class SwapPairs {
    * 迭代法
    */
   private ListNode swapPairsIt(ListNode head) {
-    ListNode pre = new ListNode(0, head);
-    ListNode cur = pre;
+    ListNode dummy = new ListNode(0, head);
+    ListNode pre = dummy;
 
-    while (cur.next != null && cur.next.next != null) {
-      ListNode start = cur.next;
-      ListNode end = cur.next.next;
+    while (pre.next != null && pre.next.next != null) {
+      ListNode start = pre.next;
+      ListNode end = pre.next.next;
       start.next = end.next;
       end.next = start;
-      cur.next = end;
-      cur = start;
+      pre.next = end;
+      pre = start;
     }
-    return pre.next;
+    return dummy.next;
   }
 }
