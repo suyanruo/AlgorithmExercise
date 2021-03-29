@@ -16,6 +16,8 @@ import java.util.List;
  * 输出：["e","l","l"]
  *
  * 链接：https://leetcode-cn.com/problems/find-common-characters
+ *
+ * 参考：https://leetcode-cn.com/problems/find-common-characters/solution/1002cha-zhao-chang-yong-zi-fu-by-111-101/
  */
 public class CommonChars {
 
