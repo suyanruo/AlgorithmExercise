@@ -38,16 +38,16 @@ public class AllTreePath {
     if (root == null) {
       return;
     }
+    currentPath =  constructPath(currentPath, root.val);
     if (root.left == null && root.right == null) {
-      currentPath =  constructPath(currentPath, root.val);
       paths.add(currentPath);
       return;
     }
     if (root.left != null) {
-      findPath(root.left, paths, constructPath(currentPath, root.val));
+      findPath(root.left, paths, currentPath);
     }
     if (root.right != null) {
-      findPath(root.right, paths, constructPath(currentPath, root.val));
+      findPath(root.right, paths, currentPath);
     }
   }
 
