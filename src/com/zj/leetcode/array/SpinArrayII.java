@@ -29,7 +29,7 @@ package com.zj.leetcode.array;
  * ref: https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii/solution/fu-xue-ming-zhu-bang-zhu-ni-geng-shen-ke-zcu0/
  */
 
-class SpinArrayII {
+public class SpinArrayII {
   public boolean search(int[] nums, int target) {
     int start = 0, end = nums.length - 1;
     int mid;
