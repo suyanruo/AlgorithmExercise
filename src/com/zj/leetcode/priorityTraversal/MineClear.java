@@ -1,4 +1,4 @@
-package com.zj.leetcode.firstSearch;
+package com.zj.leetcode.priorityTraversal;
 
 /**
  * Created on 2020/8/20.

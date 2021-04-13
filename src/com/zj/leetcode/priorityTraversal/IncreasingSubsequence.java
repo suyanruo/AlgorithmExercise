@@ -1,4 +1,4 @@
-package com.zj.leetcode.firstSearch;
+package com.zj.leetcode.priorityTraversal;
 
 import java.util.ArrayList;
 import java.util.HashMap;
