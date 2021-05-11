@@ -2,38 +2,26 @@ package com.zj.leetcode.bitOperation;
 
 /**
  * Created by ZhangJian on 2021/5/11.
- * 给你一个整数数组 perm ，它是前 n 个正整数的排列，且 n 是个 奇数 。
- * 它被加密成另一个长度为 n - 1 的整数数组 encoded ，满足 encoded[i] = perm[i] XOR perm[i + 1] 。比方说，如果 perm = [1,3,2] ，那么 encoded = [2,1] 。
- * 给你 encoded 数组，请你返回原始数组 perm 。题目保证答案存在且唯一。
+ * 未知 整数数组 arr 由 n 个非负整数组成。
+ * 经编码后变为长度为 n - 1 的另一个整数数组 encoded ，其中 encoded[i] = arr[i] XOR arr[i + 1] 。例如，arr = [1,0,2,1] 经编码后得到 encoded = [1,2,3] 。
+ * 给你编码后的数组 encoded 和原数组 arr 的第一个元素 first（arr[0]）。
+ * 请解码返回原数组 arr 。可以证明答案存在并且是唯一的。
  *
  * 示例 1：
  *
- * 输入：encoded = [3,1]
- * 输出：[1,2,3]
- * 解释：如果 perm = [1,2,3] ，那么 encoded = [1 XOR 2,2 XOR 3] = [3,1]
- * 示例 2：
+ * 输入：encoded = [1,2,3], first = 1
+ * 输出：[1,0,2,1]
+ * 解释：若 arr = [1,0,2,1] ，那么 first = 1 且 encoded = [1 XOR 0, 0 XOR 2, 2 XOR 1] = [1,2,3]
  *
- * 输入：encoded = [6,5,4,6]
- * 输出：[2,4,1,5,3]
- *
- * 链接：https://leetcode-cn.com/problems/decode-xored-permutation
- *
- * ref: https://leetcode-cn.com/problems/decode-xored-permutation/solution/gong-shui-san-xie-note-bie-pian-li-yong-zeh6o/
+ * 链接：https://leetcode-cn.com/problems/decode-xored-array
  */
 public class Decode {
-    public int[] decode(int[] encoded) {
+    public int[] decode(int[] encoded, int first) {
         int n = encoded.length + 1;
         int[] ans = new int[n];
-        int sum1 = 0, sum2 = 0;
-        for (int i = 0; i < n - 1; i += 2) {
-            sum1 ^= encoded[i];
-        }
-        for (int i = 1; i <= n; i++) {
-            sum2 ^= i;
-        }
-        ans[n - 1] = sum1 ^ sum2;
-        for (int i = n - 2; i >= 0; i--) {
-            ans[i] = encoded[i] ^ ans[i + 1];
+        ans[0] = first;
+        for (int i = 1; i < n; i++) {
+            ans[i] = encoded[i - 1] ^ ans[i - 1];
         }
         return ans;
     }
