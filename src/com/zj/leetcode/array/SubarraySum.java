@@ -1,4 +1,4 @@
-package com.zj.leetcode.dynamic;
+package com.zj.leetcode.array;
 
 import java.util.HashSet;
 import java.util.Set;
