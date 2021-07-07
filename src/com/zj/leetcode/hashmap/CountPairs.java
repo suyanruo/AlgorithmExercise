@@ -102,6 +102,7 @@ public class CountPairs {
                     }
                 }
             }
+            // 这样的计数方式，我们对于二元组 (x, t)(x,t) 会分别计数两次（遍历 xx 和 遍历 tt），因此最后要利用容斥原理，对重复计数的进行减半操作
             ans >>= 1;
             return (int) (ans % mod);
         }
