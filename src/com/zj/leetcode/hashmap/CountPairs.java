@@ -107,4 +107,25 @@ public class CountPairs {
             return (int) (ans % mod);
         }
     }
+
+    public class Solution3 {
+        int mod = (int) (1e9 + 7);
+        int max = 1 << 22;
+
+        public int countPairs(int[] deliciousness) {
+            Map<Integer, Integer> map = new HashMap<>();
+            int ans = 0;
+            for (int de : deliciousness) {
+                for (int i = 1; i < max; i <<= 1) {
+                    int t = i - de;
+                    if (map.containsKey(t)) {
+                        ans += map.get(t);
+                        if (ans >= mod) ans -= mod;
+                    }
+                }
+                map.put(de, map.getOrDefault(de, 0) + 1);
+            }
+            return ans;
+        }
+    }
 }
