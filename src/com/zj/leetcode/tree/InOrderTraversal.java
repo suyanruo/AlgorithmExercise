@@ -8,7 +8,7 @@ import java.util.Stack;
 
 /**
  * Created on 2020/9/14.
- * 给定一个二叉树，返回它的中序 遍历。
+ * 给定一个二叉树，返回它的中序遍历。
  *
  * 示例:
  *
@@ -20,7 +20,7 @@ import java.util.Stack;
  *    3
  *
  * 输出: [1,3,2]
- * 进阶: 递归算法很简单，你可以通过迭代算法完成吗？
+ * 进阶:递归算法很简单，你可以通过迭代算法完成吗？
  *
  * 链接：https://leetcode-cn.com/problems/binary-tree-inorder-traversal
  */

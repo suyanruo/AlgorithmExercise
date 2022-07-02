@@ -36,6 +36,27 @@ public class Main {
         node3.left = node6;
         node3.right = node7;
         new Solution().Convert(node);
+
+
+        System.out.printf(longestSubstring("adb*352dd"));
+    }
+
+    private static String longestSubstring(String s) {
+        int start = 0, end = 0;
+        int max = 0;
+        String sub = "";
+        char[] cs = s.toCharArray();
+        while (end < s.length()) {
+            if ((cs[end] >= 'A' && cs[end] <= 'z') || cs[end] == ' ') end++;
+            else {
+                if (max < end - start) {
+                    max = end - start;
+                    sub = s.substring(start, end);
+                    start = ++end;
+                }
+            }
+        }
+        return sub;
     }
 
     public static void doInsertSort() {
