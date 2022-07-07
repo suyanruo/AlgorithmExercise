@@ -11,10 +11,9 @@ import com.zj.model.TrieNode;
  * Trie() 初始化前缀树对象。
  * void insert(String word) 向前缀树中插入字符串 word 。
  * boolean search(String word) 如果字符串 word 在前缀树中，返回 true（即，在检索之前已经插入）；否则，返回 false 。
- * boolean startsWith(String prefix) 如果之前已经插入的字符串 word 的前缀之一为 prefix ，返回 true ；否则，返回 false 。
- *  
+ * boolean startsWith(String prefix) 如果之前已经插入的字符串word 的前缀之一为 prefix ，返回 true ；否则，返回 false 。
+ * 
  * 链接：https://leetcode-cn.com/problems/implement-trie-prefix-tree
- *
  * ref: https://leetcode-cn.com/problems/implement-trie-prefix-tree/solution/trie-tree-de-shi-xian-gua-he-chu-xue-zhe-by-huwt/
  */
 
